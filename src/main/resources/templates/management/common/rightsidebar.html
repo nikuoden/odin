@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:tiles="http://www.thymeleaf.org">
+<head th:fragment="common_header">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<!-- Custom CSS -->
+<link href="../../css/common/odin.css" th:href="@{/css/common/odin.css}" rel="stylesheet" type="text/css" media="all" />
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+	        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+</head>
+	<div id="sidebar" th:fragment="common_rightsidebar" class="sidebar navbar-inverse">
+		<ul class="sidebar-nav">
+			<li class="sidebar-brand">
+				Article Image
+				<p><input class="articleImage" type="text" name="articleImage" /></p>
+			</li>
+			<li class="sidebar-brand">
+				Article URL
+				<p><input class="articleUrl" type="text" name="articleUrl" /></p>
+			</li>
+			<li class="sidebar-brand">
+				カテゴリー
+				<p><input class="category" type="text" name="category" /></p>
+			</li>
+			<li class="sidebar-brand">
+				タグ
+				<p><input class="tag" type="text" name="tag" /></p>
+			</li>
+			<li class="sidebar-brand">
+				キーワード
+				<p><input class="keyword" type="text" name="keyword" /></p>
+			</li>
+			<li class="sidebar-brand">
+				公開フラグ
+				<input class="publicFlag" type="checkbox" name="publicFlag" />
+			</li>
+		</ul>
+	</div>
+</html>

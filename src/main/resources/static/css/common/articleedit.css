@@ -1,0 +1,67 @@
+.contents {
+	position: absolute;
+	top: 54px;
+	right: 0;
+	bottom: 55px;
+	left: 0;
+	background: #FFF;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.contents .title {
+	position: fixed;
+	left: 0;
+	z-index: 999;
+	width: 100%;
+}
+
+.contents .title input {
+	width: 100%;
+	height: 60px;
+	border: 0;
+	margin: 0;
+	padding: 0 20px;
+	font-size: 3.6rem;
+	font-weight: bold;
+	letter-spacing: -1px;
+}
+
+.contents .body header small {
+	padding: 0 20px;
+}
+
+.contents .article-preview header small {
+	padding: 0 20px;
+}
+
+.contents .body {
+	width: 50%;
+	padding: 15px;
+	border-right: 1px solid #eee;
+	position: absolute;
+}
+
+.contents .body, .contents .article-preview {
+	width: 50%;
+	padding: 15px;
+	bottom: 40px;
+	position: absolute;
+	top: 55px;
+	border-top: #EDECE4 1px solid;
+	background: #FFF;
+		height: auto;
+}
+
+.contents .article-preview {
+	right: 0;
+	border-left: #EDECE4 1px solid;
+	height: auto;
+}
+
+.contents .body .edit-body {
+	wrap:'off';
+	width:100%;
+	height:100%;
+	max-width:100%;
+}

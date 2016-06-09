@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:tiles="http://www.thymeleaf.org" lang="jp">
+<head>
+<title>odin</title>
+<meta name="_csrf" th:content="${_csrf.token}"/>
+<meta name="_csrf_header" th:content="${_csrf.headerName}"/>
+<head th:include="management/common/topbar :: common_header" th:remove="tag" />
+	<!-- Custom CSS -->
+	<link href="../../css/common/articleedit.css" th:href="@{/css/common/articleedit.css}" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+	<div th:substituteby="management/common/topbar :: common_topbar"></div>
+	<div th:substituteby="management/common/bottombar :: common_bottombar"></div>
+	<div th:substituteby="management/common/rightsidebar :: common_rightsidebar"></div>
+	<div class="contents" th:attr="data-articleid=${article}">
+		<header>
+			<section class="title">
+				<input class="edit-title" placeholder="Your Post Title" tabindex="1" type="text" value=""/>
+			</section>
+		</header>
+		<section class="body">
+			<header><small>Markdown</small></header>
+			<textarea class="edit-body" style="border:none;"></textarea>
+		</section>
+		<section class="article-preview">
+			<header><small>プレビュー</small></header>
+			<section class="preview" style="display: inline;">
+				<div></div>
+			</section>
+		</section>
+	</div>
+	<script src="../js/common/marked.js" th:src="@{/js/common/marked.js}"    type="text/javascript"></script>
+	<script src="../js/common/odin.js" th:src="@{/js/common/odin.js}"        type="text/javascript"></script>
+	<script src="../js/common/odin.js" th:src="@{/js/common/articleedit.js}" type="text/javascript"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/autosize.js/1.18.15/jquery.autosize.js" type="text/javascript"></script>
+</body>
+</html>
